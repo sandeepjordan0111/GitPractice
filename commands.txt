@@ -1,0 +1,379 @@
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice
+$ git remote add origin "https://github.com/sandeepjordan0111/GitPractice.git"
+fatal: not a git repository (or any of the parent directories): .git
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice
+$ git init
+Initialized empty Git repository in C:/Users/sandeepm/Git Practice/.git/
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git remote add origin "https://github.com/sandeepjordan0111/GitPractice.git"
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git pull https://github.com/sandeepjordan0111/GitPractice.git
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 601 bytes | 30.00 KiB/s, done.
+From https://github.com/sandeepjordan0111/GitPractice
+ * branch            HEAD       -> FETCH_HEAD
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git add file1.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file1.txt
+
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ ls
+README.md  file1.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git commit -m 'First file created'
+[master cdf0780] First file created
+ Committer: Mandala <sandeep.mandala@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git commit -m "Changes made to First file"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git log
+commit cdf078078245afe5e1d5eaaa313f982850dc423f (HEAD -> master)
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:40:50 2021 +0530
+
+    First file created
+
+commit c810fe75eda490a3643352e1ec479524c88e65a0
+Author: sandeepjordan0111 <43679701+sandeepjordan0111@users.noreply.github.com>
+Date:   Mon May 10 09:20:27 2021 +0530
+
+    Initial commit
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git commit -m 'Changes made to first file'
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git log
+commit cdf078078245afe5e1d5eaaa313f982850dc423f (HEAD -> master)
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:40:50 2021 +0530
+
+    First file created
+
+commit c810fe75eda490a3643352e1ec479524c88e65a0
+Author: sandeepjordan0111 <43679701+sandeepjordan0111@users.noreply.github.com>
+Date:   Mon May 10 09:20:27 2021 +0530
+
+    Initial commit
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git commit -a
+hint: Waiting for your editor to close the file...
+[main 2021-05-10T04:23:00.875Z] update#setState idle
+(node:4568) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+(node:4568) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+[main 2021-05-10T04:23:30.892Z] update#setState checking for updates
+[main 2021-05-10T04:23:30.950Z] update#setState downloading
+[main 2021-05-10T04:23:41.131Z] update#setState updating
+[main 2021-05-10T04:23:58.354Z] update#setState ready
+Aborting commit due to empty commit message.
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git log
+commit cdf078078245afe5e1d5eaaa313f982850dc423f (HEAD -> master)
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:40:50 2021 +0530
+
+    First file created
+
+commit c810fe75eda490a3643352e1ec479524c88e65a0
+Author: sandeepjordan0111 <43679701+sandeepjordan0111@users.noreply.github.com>
+Date:   Mon May 10 09:20:27 2021 +0530
+
+    Initial commit
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git commit -a "Changes made to file 1"
+fatal: paths 'Changes made to file 1 ...' with -a does not make sense
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git commit -a -m "Changes made to file 1"
+[master 7fe06e2] Changes made to file 1
+ Committer: Mandala <sandeep.mandala@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git log
+commit 7fe06e2693f9fa55a140c74053e523840704050e (HEAD -> master)
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:55:37 2021 +0530
+
+    Changes made to file 1
+
+commit cdf078078245afe5e1d5eaaa313f982850dc423f
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:40:50 2021 +0530
+
+    First file created
+
+commit c810fe75eda490a3643352e1ec479524c88e65a0
+Author: sandeepjordan0111 <43679701+sandeepjordan0111@users.noreply.github.com>
+Date:   Mon May 10 09:20:27 2021 +0530
+
+    Initial commit
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git revert ^C
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ cat file1.txt
+This is first file I have created.
+
+Git commited with message "First file created"
+
+
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git log
+commit 7fe06e2693f9fa55a140c74053e523840704050e (HEAD -> master)
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:55:37 2021 +0530
+
+    Changes made to file 1
+
+commit cdf078078245afe5e1d5eaaa313f982850dc423f
+Author: Mandala <sandeep.mandala@capgemini.com>
+Date:   Mon May 10 09:40:50 2021 +0530
+
+    First file created
+
+commit c810fe75eda490a3643352e1ec479524c88e65a0
+Author: sandeepjordan0111 <43679701+sandeepjordan0111@users.noreply.github.com>
+Date:   Mon May 10 09:20:27 2021 +0530
+
+    Initial commit
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git checkout 7fe06e26 file1.txt
+Updated 1 path from 13d295e
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ cat file1.txt
+This is first file I have created.
+
+Git commited with message "First file created"
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git branch
+* master
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git branch firstbranch
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ git add file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ git commit -m "Second file added"
+[firstbranch 13268e6] Second file added
+ Committer: Mandala <sandeep.mandala@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ git status
+On branch firstbranch
+nothing to commit, working tree clean
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ ls
+README.md  file1.txt  file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ ls
+README.md  file1.txt  file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ ls
+README.md  file1.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git merge firstbranch
+Updating 7fe06e2..13268e6
+Fast-forward
+ file2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ ls
+README.md  file1.txt  file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ ls
+README.md  file1.txt  file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ ls
+README.md  file1.txt  file2.txt
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ cat file2.txt
+This is file 2.
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ cat file1.txt
+This is first file I have created.
+
+Git commited with message "First file created"
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git push origin master
+username for "https://github.com":sandeepjordan0111
+password for "https://sandeepjordan0111@githu.com":supermanbatman5445
+
+fatal: helper error (-1073741510): Unknown
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ username for "https://github.com":sandeepjordan0111 "
+> password for "https://sandeepjordan0111@githu.com":supermanbatman5445"
+bash: username: command not found
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git push origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 858 bytes | 286.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/sandeepjordan0111/GitPractice/pull/new/master
+remote:
+To https://github.com/sandeepjordan0111/GitPractice.git
+ * [new branch]      master -> master
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$ git push origin master
+Everything up-to-date
+
+sandeepm@LIN36001856 MINGW64 ~/Git Practice (master)
+$
